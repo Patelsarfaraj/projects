@@ -1,0 +1,119 @@
+<!-- <!DOCTYPE html>
+<html>
+<head  >
+	<title></title>
+	<center><p><b><i>IF YOU JOIN OUR SESSION -ENTER DETAILS </i></b></p>
+</center></head>
+<body bgcolor="blue">
+	<table border="4"align="center" bgcolor="red"><form  >
+		<tr>
+			<th >
+				USER NAME:<input type="text" name="id" >
+			</th>
+		</tr>
+		<tr>
+			<th>
+				PASSWORD:<input type="PASSWORD" name="pin">
+			</th>
+		</tr>
+		<tr>
+			<th>
+				GENDER:<input type="RADIO"VALUE="M" name="MALE">MALE
+			<input type="RADIO"VALUE="F" name="MALE">FEMALE
+
+
+			</th>
+		</tr><tr><th>
+		HOBBIES:<input type="checkbox"VALUE="M" name="cricket">cricket
+			<input type="checkbox"VALUE="M" name="cricket">cricket<input type="checkbox"VALUE="M" name="football">football<input type="checkbox"VALUE="M" name="arts">arts
+</th></tr>
+		
+		<tr>
+			<th>
+			DATE OF BIRTH:<input type="DATE" name="born">
+			</th>
+		</tr>
+
+		<tr>
+			<th>
+				ADDRESS:<textarea></textarea>
+			</th>
+		</tr>
+		
+<tr>
+			<th >
+				<input type="submit" name="register">
+
+				<input type="reset" name="register">
+		
+			</th>
+		</tr>
+		
+
+
+
+</form>
+	</table>
+
+</body>
+</html> -->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+
+	<script>
+		$(document).ready(function () {
+			$("button").click(function () {
+				$("#t1").fadeIn("slow");
+			});
+		});
+	</script>
+</head>
+
+<body>
+
+	<table id="t1"></table>
+
+	<button onclick="myxml()">detail</button>
+
+	<script>
+		function myxml() {
+			var xmlhttp = new XMLHttpRequest();
+			xmlhttp.onreadystatechange = function () {
+				if (this.readyState == 4 && this.status == 200) {
+					loadxml(xmlhttp);
+				}
+			};
+			xmlhttp.open("get", "fd_rate.xml", true);
+			xmlhttp.send();
+		}
+		function loadxml(xml) {
+			var i;
+			var xmlDoc = xml.responseXML;
+			var table = "<tr><th>abc</th><th>";
+			var x = xmlDoc.getElementsByTagName("fixed_deposite");
+			for (i = 0; i < x.length; i++) {
+				table += "<tr><td>" + x[i].getElementsByTagName("Tenure")[0].childNodes[0].nodeValue + "</td><td>" +
+					x[i].getElementsByTagName("Normal_Citizen_FD_Rate")[0].childNodes[0].nodeValue + "</td><td>" +
+					x[i].getElementsByTagName("Senior_Citizen_FD_Rate")[0].childNodes[0].nodeValue + "</td></tr>";
+
+
+			}
+			document.getElementById("t1").innerHTML = table;
+
+		}
+
+	</script>
+</body>
+
+</html>

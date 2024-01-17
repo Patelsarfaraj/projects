@@ -1,0 +1,246 @@
+* {
+	margin: 0px;
+	padding: 0px;
+}
+
+.img1 {
+	background-color: #F1F1F1;
+
+}
+
+.img1 img {
+
+	width: 150px;
+	margin-top: 10px;
+	margin-left: 70px;
+
+
+}
+
+.mainlogo {
+	height: 260PX;
+	background-color: white;
+
+}
+
+.mainlogo img {
+	width: 90%;
+	height: 200px;
+	display: block;
+	margin: auto;
+}
+
+.mainlogo button {
+	display: block;
+	margin: auto;
+	margin-top: 10px;
+	font-size: 15px;
+	color: white;
+	border: none;
+	border-radius: 4px;
+}
+
+.imges {
+	height: 450px;
+	width: 100%;
+	background-color: #F1F1F1;
+
+
+}
+
+.off1 img {
+	float: right;
+	margin: 15px;
+	border-radius: 12px;
+}
+
+.font {
+	font-size: 35px;
+	text-align: center;
+
+}
+
+.font2 {
+	text-align: RIGHT;
+	font-size: 15px;
+
+	background-color: #F1F1F1;
+}
+
+.b2 {
+	display: block;
+	margin: auto;
+	margin-top: 25px;
+	color: white;
+	background-color: dodgerblue;
+	padding: 5px;
+	border: 1px solid black;
+}
+
+.mainfoot {
+	height: 50px;
+	background-color: grey;
+	margin-top: 40px;
+	text-decoration: none;
+	color: black;
+}
+
+
+.privacy {
+	margin: auto;
+	height: 40px;
+	width: 1030px;
+	text-align: center;
+
+	border-radius: 8px;
+	margin-top: 40px;
+	background-color: #F1F1F1;
+
+	text-align: center;
+
+}
+
+.privacy img {
+
+	float: left;
+	margin-left: 40px;
+}
+
+/*NET BANKING*/
+.main {
+	height: 100px;
+	background-color: white;
+}
+
+.main img {
+	display: block;
+	margin: auto;
+	height: 60px;
+	width: 80;
+}
+
+.nav2 {
+	text-align: center;
+	margin-top: 10px;
+	font-size: 20px;
+}
+
+.main2 {
+	background-color: #F1F1F1;
+	margin-top: 20px;
+	height: 500px;
+
+
+
+}
+
+.form-1 {
+	border: 1px solid black;
+	background-color: white;
+	display: block;
+	margin: auto;
+	padding: 10px;
+	height: 400px;
+	width: 1200px;
+
+
+
+}
+
+
+
+
+.form-2 {
+	padding: 10px;
+	border-radius: 10px;
+}
+
+.para-1 {
+
+	width: 460px;
+	background-color: #F1F1F1;
+	margin-left: 10PX;
+}
+
+.bt2 button {
+	width: 200px;
+	margin-left: 212px;
+}
+
+.logo2-0 {
+	height: 90px;
+	width: 80px;
+	border-bottom: 1PX solid BLUE;
+}
+
+.logo2-0 img {
+	height: 55px;
+	width: 150px;
+	margin-left: 30px;
+	margin-top: 20px;
+
+}
+
+.main3 {
+	width: 820px;
+	height: 360px;
+	display: block;
+	margin: auto;
+	background-color: #F1F1F1;
+	margin-top: 40PX;
+}
+
+.main3 input[type=text] {
+	height: 35px;
+	width: 210px;
+	margin-top: 20PX;
+	margin-left: 10PX;
+}
+
+.main3 input[type=number] {
+	height: 35px;
+	width: 210px;
+	margin-top: 20PX;
+	margin-left: 10PX;
+}
+
+.main3 input[type=date] {
+	height: 35px;
+	width: 210px;
+	margin-top: 20PX;
+	margin-left: 10PX;
+}
+
+.btn3 button {
+	display: block;
+	margin: auto;
+	margin-top: 40px;
+
+}
+
+#agree {
+	padding: 40px;
+
+}
+
+table {
+	margin: 0 auto;
+	font-size: large;
+	border: 2px solid black;
+	border-radius: 10px;
+
+}
+
+th,
+td {
+	border: 1px solid black;
+	text-align: center;
+	padding: 10px;
+	border-radius: 5px;
+}
+
+td {
+	font-weight: lighter;
+	background-color: aliceblue;
+	border: 1px solid black;
+}

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Essay Submission Form</title>
+	<script>
+		function countChars(element, counter) {
+			var count = element.value.length;
+			counter.innerHTML = "Characters remaining: " + (250 - count);
+		}
+	</script>
+</head>
+<body>
+	<h1>Essay Submission Form</h1>
+	<form>
+		<label for="title">Essay Title:</label>
+		<!-- <input type="text" id="title" name="title" onkeyup="countChars(this, titleCounter)">
+		<span id="titleCounter">Characters remaining: 200</span>
+		<br><br> -->
+		<label for="content">Essay Content:</label>
+		<textarea id="content" name="content" rows="10" cols="50" onkeyup="countChars(this, contentCounter)"></textarea>
+		<span id="contentCounter">Characters remaining: 250</span>
+		<br><br>
+		<input type="submit" value="Submit">
+	</form>
+</body>
+</html>
+ <!-- <!DOCTYPE html>
+<html>
+<head>
+	<title>Essay Submission Form</title>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script>
+		$(document).ready(function() {
+			var maxTitleChars = 200;
+			var maxContentChars = 5000;
+
+			$('#title').on('input', function() {
+				var titleChars = $(this).val().length;
+				var titleCharsRemaining = maxTitleChars - titleChars;
+				$('#title-counter').text('Characters remaining: ' + titleCharsRemaining);
+			});
+
+			$('#content').on('input', function() {
+				var contentChars = $(this).val().length;
+				var contentCharsRemaining = maxContentChars - contentChars;
+				$('#content-counter').text('Characters remaining: ' + contentCharsRemaining);
+			});
+		});
+	</script>
+</head>
+<body>
+	<h1>Essay Submission Form</h1>
+	<form>
+		<label for="title">Essay Title:</label>
+		<input type="text" id="title" name="title">
+		<span id="title-counter">Characters remaining: 200</span>
+		<br><br>
+		<label for="content">Essay Content:</label>
+		<textarea id="content" name="content" rows="10" cols="50"></textarea>
+		<span id="content-counter">Characters remaining: 5000</span>
+		<br><br>
+		<input type="submit" value="Submit">
+	</form>
+</body>
+</html>  -->
+
+!

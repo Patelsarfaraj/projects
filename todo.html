@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>add chapter</title>
+
+
+</head>
+
+<body>
+  <header>
+    <input id="input1" type="text">
+    <button id="btn">confirm</button>
+    <ul id="ulTag">
+      <li>
+        <h3>chpter1</h3>
+        <button onclick="edit(this)">edit</button>
+        <button onclick="removechap(this)">remove</button>
+      </li>
+
+    </ul>
+  </header>
+  <script>
+    let ulTag = document.getElementById('ulTag');
+    const btn1 = document.getElementById('btn');
+    btn1.addEventListener('click', addchapter);
+    function addchapter(e) {// e is argument element
+      if (ulTag.children[0].className == 'empty') {
+        ulTag.children[0].remove();
+      }
+      let curbtn = e.currentTarget;
+      let curinput = curbtn.previousElementSibling;
+      //console.log(curinput.value)
+      let newli = document.createElement('li');
+      //newli.textContent=curinput.value;
+      newli.innerHTML = `<h3>${curinput.value}</h3>
+          <button onclick="edit(this)">edit</button>
+    <button onclick="removechap(this)">remove</button>`
+
+      ulTag.appendChild(newli)
+    }
+    function removechap(element) {
+      element.parentElement.remove();
+      if (ulTag.children.length <= 0) {
+
+        let empty = document.createElement("h3");
+        empty.classList.add('empty');
+        empty.textContent = "nothing";
+        ulTag.appendChild(empty);
+      }
+    }
+    function edit(element) {
+      if (element.textContent == "done") {
+
+        element.textContent = "edit";
+        let chpname = element.previousElementSibling.value;
+        let heading = document.createElement("h3");
+        heading.textContent = chpname;
+
+        element.parentElement.replaceChild(heading, element.previousElementSibling);
+
+
+      } else {
+        element.textContent = "done";
+        let chpname = element.previousElementSibling.textContent;
+        let input2 = document.createElement("input");
+        input2.value = chpname;
+        input2.type = "text";
+        // ulTag.append(input2);
+
+        element.parentElement.replaceChild(input2, element.previousElementSibling);
+
+      }
+
+    }
+  </script>
+</body>
+
+</html>

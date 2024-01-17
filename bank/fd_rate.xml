@@ -1,0 +1,27 @@
+<bank>
+<fixed_deposite>
+<Tenure>7 days - 1 month 1 day	</Tenure>
+<Normal_Citizen_FD_Rate	>3%	</Normal_Citizen_FD_Rate>
+<Senior_Citizen_FD_Rate>3.5%</Senior_Citizen_FD_Rate>
+</fixed_deposite>
+<fixed_deposite>
+<Tenure>1 month 2 days - 1 month 17 days		</Tenure>
+<Normal_Citizen_FD_Rate	>3.5%</Normal_Citizen_FD_Rate>
+<Senior_Citizen_FD_Rate>4%</Senior_Citizen_FD_Rate>
+</fixed_deposite>
+<fixed_deposite>
+<Tenure>1 month 18 days - 5 months 30 days		</Tenure>
+<Normal_Citizen_FD_Rate	>4.5%		</Normal_Citizen_FD_Rate>
+<Senior_Citizen_FD_Rate>5%</Senior_Citizen_FD_Rate>
+</fixed_deposite>
+<fixed_deposite>
+<Tenure>6 months - 9 months 1 day		</Tenure>
+<Normal_Citizen_FD_Rate	>5.75%		</Normal_Citizen_FD_Rate>
+<Senior_Citizen_FD_Rate>6.25%</Senior_Citizen_FD_Rate>
+</fixed_deposite>
+<fixed_deposite>
+<Tenure>9 months 2 days - 11 months 30 days		</Tenure>
+<Normal_Citizen_FD_Rate	>6%		</Normal_Citizen_FD_Rate>
+<Senior_Citizen_FD_Rate>6.5%</Senior_Citizen_FD_Rate>
+</fixed_deposite>
+</bank>

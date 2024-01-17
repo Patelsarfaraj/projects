@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table {
+            margin: 0 auto;
+            font-size: large;
+            border: 2px solid black;
+            border-radius: 10px;
+
+        }
+
+        th,
+        td {
+            border: 1px solid black;
+            text-align: center;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        td {
+            font-weight: lighter;
+            background-color: aliceblue;
+            border: 1px solid black;
+        }
+
+        .nav {
+            height: 100px;
+            width: 100%;
+            background-color: blanchedalmond;
+            border: 1px solid black;
+            border-radius: 5px;
+        }
+
+        .nav img {
+            height: 70px;
+            float: left;
+
+            margin-top: 15px;
+            margin-left: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <div class="nav">
+            <nav><img src="hdfc-bank.png" onclick="loadxml()"> </nav>
+            <nav style="text-align: center; padding: 20px; font-weight: bold; font-size:xx-large;">HDFC Bank Fixed
+                Deposit</nav>
+        </div>
+        <div class="t1">
+            <table id="p"></table>
+        </div>
+
+        <div class="btn1">
+            <button type="button" onclick="loadxml()" id="b1">FD RATES</button>
+        </div>
+
+    </div>
+
+
+</body>
+<script>
+    function loadxml() {
+        var xmlhttp = new XMLHttpRequest();
+        xmlhttp.onreadystatechange = function () {
+            if (this.readyState == 4 && this.status == 200) {
+                myFunction(xmlhttp);
+            }
+        };
+        xmlhttp.open("get", "fd_rate.xml", true);
+        xmlhttp.send();
+    }
+    function myFunction(xml) {
+        var i;
+        var xmlDoc = xml.responseXML;
+        var table = "<tr><th> Tensure </th><th>Normal Citizen FD Rate	</th><th>Senior Citizen FD Rate	</th></tr> ";
+        var x = xmlDoc.getElementsByTagName("fixed_deposite");
+        for (i = 0; i < x.length; i++) {
+            table += "<tr><td>" + x[i].getElementsByTagName("Tenure")[0].childNodes[0].nodeValue + "</td><td>" +
+                x[i].getElementsByTagName("Normal_Citizen_FD_Rate")[0].childNodes[0].nodeValue + "</td><td>" +
+                x[i].getElementsByTagName("Senior_Citizen_FD_Rate")[0].childNodes[0].nodeValue + "</td></tr>";
+        }
+        document.getElementById("p").innerHTML = table;
+    }
+</script>
+
+</html>
+<!-- <!DOCTYPE html>
+<html>
+    <head>
+        <script src="jquery-3.5.1.js"></script>
+    </head>
+    <body>
+        <h3>Jwelleries Details</h3>
+        <div id="info"></div>
+        <script>
+            function loadjson(){
+                const xhr = new XMLHttpRequest();
+                xhr.onreadystatechange = function(){
+                    if(xhr.readyState == 4 && xhr.status == 200){
+                        var array = JSON.parse(this.responseText);
+                        var output = "";
+                        output += "<table border = '1'>";
+                            output += "<tr><th> FEES</th><th>Amount to be paid</th></tr>";
+                            for(let i in array)
+                            {
+                                output += "<tr><td>" + array[i].FEES+ "</td><td>" + array[i].Amount_to_be_paid + "</td></tr>"; 
+                            }
+                            output += "</table>";
+                            document.getElementById("info").innerHTML = output;
+                    }
+                }
+                xhr.open('get',"hdfc_cred.json");
+                xhr.send();
+            }
+
+            
+              </script>
+        <button onclick="loadjson()">click Me!!</button>
+    </body>
+</html> -->
